@@ -1,0 +1,6 @@
+theme = Gruvbox Dark Hard
+font-family = "JetBrainsMono Nerd Font"
+
+font-size = 20
+
+macos-option-as-alt = true

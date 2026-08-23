@@ -1,0 +1,5 @@
+[mgr]
+prepend_keymap = [
+    # 1. Make 'Enter' behave exactly like 'l' / Right Arrow (enter folder or open file)
+    { on = [ "<Enter>" ], run = "enter", desc = "Enter directory or open file" },
+]
