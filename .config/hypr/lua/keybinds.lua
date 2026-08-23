@@ -15,8 +15,8 @@ local screenshot = "hyprshot -m region --clipboard-only"
 ---- KEYBINDINGS ----
 ---------------------
 
-local mainMod = "CTRL" -- Sets "Windows" key as main modifier
-local altMod = "CTRL + SHIFT" -- Sets "Windows" key as main modifier
+local mainMod = "SUPER" -- Sets "Windows" key as main modifier
+local altMod = "SUPER + SHIFT" -- Sets "Windows" key as main modifier
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" }))
