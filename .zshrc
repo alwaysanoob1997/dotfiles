@@ -4,6 +4,7 @@ export PATH="$PATH:/Users/kevin.chacko/.lmstudio/bin"
 # End of LM Studio CLI section
 
 export EDITOR="nvim"
+alias nv="nvim"
 bindkey -e
 # For Yazi - change directory based on movement in yazi.
 function y() {
