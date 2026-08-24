@@ -3,6 +3,8 @@
 export PATH="$PATH:/Users/kevin.chacko/.lmstudio/bin"
 # End of LM Studio CLI section
 
+export EDITOR="nvim"
+bindkey -e
 # For Yazi - change directory based on movement in yazi.
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -106,3 +108,5 @@ eval "$(zoxide init zsh)"
 alias cd="z"
 alias cdi="zi"
 
+
+export PATH="/home/kevin/.local/share/pi-node/node-v22.23.2-linux-x64/bin:$PATH"

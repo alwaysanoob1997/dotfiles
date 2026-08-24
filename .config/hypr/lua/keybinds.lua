@@ -35,12 +35,12 @@ local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + b", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(launcher))
 hl.bind(altMod .. " + SPACE", hl.dsp.exec_cmd(runner))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+-- hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager)) Removing File explorer for now. I don't think it is necessary to keep this.
 hl.bind(altMod .. " + S", hl.dsp.exec_cmd(screenshot))
 
 -- closeWindowBind:set_enabled(false)
 hl.bind(
-	altMod .. " + M",
+	altMod .. " + 0", -- Changing this to 0, to remove any potential conflicts with other control based actions.
 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 )
 hl.bind(altMod .. " + Q", hl.dsp.exec_cmd(locker))
