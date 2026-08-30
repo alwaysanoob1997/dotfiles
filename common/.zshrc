@@ -92,6 +92,21 @@ else
 fi
 
 # Remove old duplicates so your most frequent recent command stays at the top
+function zshaddhistory() {
+    LASTHIST=${1//\\$'\n'/}  # Remove line continuations
+    return 2  # Prevent writing to history immediately
+}
+
+function precmd() {
+    if [[ $? == 0 && -n ${LASTHIST//[[:space:]\n]/} && -n $HISTFILE ]]; then
+        print -sr -- ${=${LASTHIST%%'\n'}}
+    fi
+}
+
+
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000
+SAVEHIST=10000
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_FIND_NO_DUPS
