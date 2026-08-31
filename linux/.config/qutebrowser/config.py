@@ -7,7 +7,8 @@ c.editor.command = [
     "-c",
     "normal {line}G{column0}l",
 ]
-
+config.bind("pr", "open -p")
+config.bind("cs", "config-source")
 config.bind(",b", "spawn --userscript qute-bitwarden-search-rbw -n")
 config.bind(",p", "spawn --userscript qute-bitwarden-search-rbw -wn")
 config.bind(",u", "spawn --userscript qute-bitwarden-search-rbw -en")

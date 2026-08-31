@@ -7,6 +7,7 @@ export EDITOR="nvim"
 alias vim="nvim"
 bindkey -e
 
+export SUN="systemctl --user start sunshine.service"
 
 # For Yazi - change directory based on movement in yazi.
 function y() {
