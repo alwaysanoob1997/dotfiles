@@ -19,7 +19,7 @@ tooltip {
 .modules-center,
 .modules-right {
   background-color: @background; 
-  border-radius: 20px;          
+  border-radius: 19px;          
   padding: 0px 5px;
   margin: 5px 0px 0px 0px;
   min-height: 10px;
@@ -37,11 +37,9 @@ tooltip {
 
 .hidden {
   opacity: 0;
-  transition: 0.1s;
 }
 
 #memory,
-/* #media, */
 #window,
 #tray-expander,
 #clock,
@@ -58,13 +56,13 @@ tooltip {
 }
 
 
-/* #media:hover, */
 #window:hover,
 #clock:hover,
 #backlight:hover,
 #network:hover,
 #bluetooth:hover,
 #pulseaudio:hover,
+#pulseaudio-slider:hover,
 #custom-update:hover {
   background-color: alpha(@foreground, .2);
   transition: .7s;
@@ -101,7 +99,6 @@ tooltip {
 window#waybar {
   background: transparent;
 }
-
 
 
 /* Configuring Workspaces in the middle */
@@ -180,26 +177,28 @@ opacity: 0.75;
 #pulseaudio {
   padding: 0 5px 0 10px;
 }
+#pulseaudio-slider {
+    border-radius: 0px 15px 15px 0px;
 
+}
 #pulseaudio-slider slider {
   all: unset;
   min-height: 0;
   min-width: 0;
   opacity: 0;
-  background-image: none;
   border: none;
   box-shadow: none;
 }
 
 #pulseaudio-slider trough {
-  min-height: 8px;
+  min-height: 6px;
   min-width: 75px;
   border-radius: 5px;
   background: @background;
 }
 
 #pulseaudio-slider highlight {
-  min-width: 10px;
+  min-width: 6px;
   border-radius: 15px;
   background: @primary;
 }
@@ -210,49 +209,35 @@ window#waybar.empty #window {
   margin: 0;
 }
 
-/* #custom-media-animation.playing { */
-/*   background-color: @error; */
-/* } */
-/* #custom-media-animation.paused { */
-/*   background-color: #fff; */
-/* } */
-
-#media:hover {
-background-color: alpha(@foreground, .2);
-  transition: .7s;
-padding: 0px 5px;
-  margin: 5px 0;
+#media {
+  font-size: 12px;
+  border-radius: 15px;
+  transition: 0.1s;
 }
-
 #custom-media-animation {
   color: @primary;
-  padding: 5px 12px;
-
 }
-
-#custom-media-now-playing {
+#custom-media-animation.playing {
+  transition: 0.1s;
+  padding: 5px 12px;
+  font-size: 10px;
+}
+#custom-media-animation.paused {
   margin: 0px 10px;
-      min-width: 0px;
+  transition: 0.1s;
+}
+#custom-media-animation.empty {
+  min-width: 0px;
+    min-height: 0px;
     padding: 0px;
+    margin: 0px;
+    border: none;
+    font-size: 0px;
+    opacity: 0;
+  transition: 0.1s;
+}
+#custom-media-now-playing {
+    padding: 0px 8px;
     margin: 0px;
 }
 
-
-#media {
-  margin-right: 5px;
-  font-size: 12px;
-  border-radius: 15px;
-  padding: 5px 10px;   
-  transition: 0.1s;
-}
-
-
-/* #media:not(.empty) { */
-/* background-color: #00ff00; */
-/* } */
-/**/
-/**/
-/* #media.empty, */
-/* #media.empty * { */
-/*    background-color: #fff;  */
-/* } */
