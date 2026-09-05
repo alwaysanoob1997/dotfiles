@@ -1,1 +1,45 @@
-while inotifywait -e close_write ~/.config/waybar; do killall -SIGUSR2 waybar; done
+#!/usr/bin/env bash
+
+CONFIG_DIR="$HOME/.config/waybar"
+LOG_FILE="/tmp/waybar-monitor.log"
+
+while true; do
+  # Start Waybar if it isn't running
+  if ! pgrep -x waybar >/dev/null; then
+    echo "[waybar-monitor] Starting Waybar..."
+
+    waybar 2>"$LOG_FILE" &
+    WAYBAR_PID=$!
+
+    # Give Waybar a moment to start/crash
+    sleep 0.5
+
+    if ! kill -0 "$WAYBAR_PID" 2>/dev/null; then
+      echo "[waybar-monitor] Waybar crashed!"
+      echo "[waybar-monitor] Error output:"
+      cat "$LOG_FILE"
+      echo
+    fi
+  else
+    WAYBAR_PID=$(pgrep -x waybar | head -n1)
+  fi
+
+  # Watch for config changes
+  inotifywait -e close_write "$CONFIG_DIR" >/dev/null 2>&1
+
+  # Reload Waybar
+  if kill -0 "$WAYBAR_PID" 2>/dev/null; then
+    echo "[waybar-monitor] Config changed, reloading Waybar..."
+    kill -SIGUSR2 "$WAYBAR_PID"
+  else
+    # Waybar crashed; print its error output and restart
+    echo "[waybar-monitor] Waybar crashed!"
+    echo "[waybar-monitor] Error output:"
+    cat "$LOG_FILE"
+    echo
+
+    echo "[waybar-monitor] Restarting Waybar..."
+    waybar 2>"$LOG_FILE" &
+    WAYBAR_PID=$!
+  fi
+done

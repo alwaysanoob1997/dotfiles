@@ -1,0 +1,15 @@
+@define-color background #0e1416;
+@define-color background-alt #1b2122;
+
+@define-color foreground #dee3e5;
+@define-color foreground-alt #bfc8ca;
+
+@define-color primary #82d3e1;
+@define-color on-primary #00363d;
+@define-color secondary #b1cbd0;
+@define-color on-secondary #1c3438;
+@define-color tertiary #b1cbd0;
+@define-color on-tertiary #1c3438;
+
+@define-color error #ffb4ab;
+@define-color on-error #690005;

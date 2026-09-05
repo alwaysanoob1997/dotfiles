@@ -1,60 +1,184 @@
-@define-color highlight rgba(117, 241, 250, 1);
-@define-color dark-9 rgba(24, 24, 27, 1);
-@define-color dark-8 rgba(39, 39, 42, 1);
-@define-color dark-7 rgba(63, 63, 70, 1);
-@define-color dark-6 rgba(82, 82, 91, 1);
-@define-color dark-5 rgba(113, 113, 122, 1);
+/* @import "../omarchy/current/theme/waybar.css"; */
 
-
+@import "generated_colors.css";
 * {
-  /* `otf-font-awesome` is required to be installed for icons */
-  font-family: FiraCode Nerd Font Propo,FiraCode Nerd Font Propo Med;
-  font-size: 20px;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: 'FiraCode Nerd Font Propo,FiraCode Nerd Font Propo Med';
+  font-size: 16px;
 }
 
+tooltip {
+  border-radius: 15px;
+  background: @background;
+  border: 2px solid alpha(@foreground, .5);
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  background-color: @background; 
+  border-radius: 20px;          
+  padding: 0px 5px;
+  margin: 5px 0px 0px 0px;
+  min-height: 10px;
+  color: @foreground;
+}
+
+.modules-left {
+  margin-left: 5px;
+}
+
+.modules-right {
+  margin-right: 5px;
+}
+
+
+.hidden {
+  opacity: 0;
+  transition: 0.1s;
+}
+
+#memory,
+/* #media, */
+#window,
+#tray-expander,
+#clock,
+#cpu,
+#network,
+#bluetooth,
+#pulseaudio,
+#pulseaudio-slider,
+#custom-update{
+  background-color: alpha(@foreground, 0.1);
+  padding: 5px 12px;
+  margin: 5px 0;
+  border-radius: 0;
+}
+
+
+/* #media:hover, */
+#window:hover,
+#clock:hover,
+#backlight:hover,
+#network:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#custom-update:hover {
+  background-color: alpha(@foreground, .2);
+  transition: .7s;
+}
+
+#custom-expand-icon {
+  margin-right: 7px;
+  padding: 0px 10px;
+  border-radius: 15px;
+}
+
+#tray,
+#memory,
+#cpu {
+  background-color: transparent;
+  margin: 5px;
+  padding: 0 2px;
+}
+
+#tray-expander {
+  padding: 0 0 0 1px;
+  margin-left: 0px;
+  border-radius: 15px;
+  background-color: transparent;
+}
+
+#cpu {
+  padding: 0 15px 0 10px;
+  border-radius: 0 15px 15px 0;
+  margin-right: 0px;
+}
+
+/* Configuring the active window */
 window#waybar {
-  background-color: @dark-9;
-  color: white;
-  opacity: 1;
+  background: transparent;
+}
+
+
+
+/* Configuring Workspaces in the middle */
+#workspaces {
+    background-color: alpha(@foreground, .05);
+    border: none;
+    padding: 0px;
+    margin: 5px 0px;
+    margin-right: 0px;
+    border-radius: 15px;
 }
 
 #workspaces button {
-  padding: 3px;
-  margin: 7px 0px 7px 7px;
-  background: transparent;
-  border-radius: 2px;
-  color: white;
+    padding: 0px 8px;
+    margin: 0px 3px;
+    color: @background;
+    border-radius: 15px;
+    background-color: alpha(@foreground, .4);
 }
 
 #workspaces button.active {
-  background: @highlight;
-  color: black;
-  font-weight: 700;
+    padding: 0px 20px;
+    /* margin: 0px 5px; */
+    background: @primary;
+    color: @on-primary;
+    border-radius: 15px;
+    opacity: 1; 
+    transition: 0.1s;
 }
 
-#submap,
-#battery,
-#bluetooth,
-#network,
-#cpu,
-#memory,
-#volume {
-  border-radius: 8px;
-  padding: 5px 8px;
-  background: @dark-8;
-  margin: 5px 10px 5px 0px;
+#workspaces button.empty {
+    opacity: 0.2; 
 }
 
-#submap,
-#workspaces button.urgent {
-  background: rgba(227, 81, 73, 1);
-  color: black;
+#workspaces button.empty.active {
+opacity: 0.75; 
 }
 
-#pulseaudio-slider {
-  padding: 0px;
-  margin: 0px;
-  margin-left: 8px;
+#workspaces button:hover:not(.active) {
+    background-color: alpha(@foreground, .3);
+    color: @background;
+    opacity: 1; 
+    transition: .3s;
+}
+
+/* Configuring the middle modules */
+#clock {
+  border-radius: 15px;
+  padding: 0 15px;
+  margin: 5px 0px;
+  background-color: transparent;
+}
+
+#custom-update {
+  font-size: 14px;
+  border-radius: 15px;
+  padding: 0 11px 0 10px;
+  margin-left: 2px;
+  margin-right: 0px;
+}
+
+
+
+#window {
+  border-radius: 15px; 
+  padding: 5px 10px;   
+  margin-right: 0px;   
+  transition: 0.1s;
+}
+
+
+#network {
+  border-radius: 15px 0 0 15px;
+}
+
+#pulseaudio {
+  padding: 0 5px 0 10px;
 }
 
 #pulseaudio-slider slider {
@@ -71,39 +195,64 @@ window#waybar {
   min-height: 8px;
   min-width: 75px;
   border-radius: 5px;
-  background: @dark-7;
+  background: @background;
 }
 
 #pulseaudio-slider highlight {
   min-width: 10px;
-  border-radius: 5px;
-  background: @highlight;
+  border-radius: 15px;
+  background: @primary;
 }
 
-tooltip {
-  background: @dark-9;
-  border-radius: 5px;
+window#waybar.empty #window {
+  color: transparent;
+  padding: 0;
+  margin: 0;
 }
 
-tooltip label {
-  color: white;
-}
+/* #custom-media-animation.playing { */
+/*   background-color: @error; */
+/* } */
+/* #custom-media-animation.paused { */
+/*   background-color: #fff; */
+/* } */
 
-#media {
-  color: #42ff9f;
-  margin: 7px 0px 7px 80px;
+#media:hover {
+background-color: alpha(@foreground, .2);
+  transition: .7s;
+padding: 0px 5px;
+  margin: 5px 0;
 }
 
 #custom-media-animation {
-  font-size: 13px;
-  margin-right: 10px;
+  color: @primary;
+  padding: 5px 12px;
+
 }
 
 #custom-media-now-playing {
-  margin-right: 10px;
+  margin: 0px 10px;
+      min-width: 0px;
+    padding: 0px;
+    margin: 0px;
 }
 
-#custom-media-time {
-  color: @dark-5;
-  font-size: 14px;
+
+#media {
+  margin-right: 5px;
+  font-size: 12px;
+  border-radius: 15px;
+  padding: 5px 10px;   
+  transition: 0.1s;
 }
+
+
+/* #media:not(.empty) { */
+/* background-color: #00ff00; */
+/* } */
+/**/
+/**/
+/* #media.empty, */
+/* #media.empty * { */
+/*    background-color: #fff;  */
+/* } */
