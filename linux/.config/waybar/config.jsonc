@@ -143,7 +143,7 @@
     "format": "",
     "format-off": "󰂲",
     "format-disabled": "󰂲",
-    "format-connected": "",
+    "format-connected": " {num_connections}",
     "format-no-controller": "",
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "ghostty -e bluetui"
