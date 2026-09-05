@@ -15,10 +15,10 @@ while :; do
 
   elif [[ "$status" == "Paused" ]]; then
     printf '{"text":"","class":"paused"}\n'
-    sleep 0.5
+    sleep 0.1
 
   else
     printf '{"text":"","class":"empty"}\n'
-    sleep 0.5
+    sleep 0.1
   fi
 done
