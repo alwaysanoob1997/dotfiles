@@ -17,7 +17,6 @@ hl.env("XCURSOR_SIZE", "30")
 -- Prevents screen flickering, Wayland buffer errors, and login stalls
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
 
-local wallpaper_path = os.getenv("HOME") .. "/wallpapers/manuchi-deer-3275594.jpg"
 -- Autostart Daemons and Programs
 hl.on("hyprland.start", function()
 	hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")

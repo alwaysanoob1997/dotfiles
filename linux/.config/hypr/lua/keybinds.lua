@@ -4,7 +4,7 @@
 
 -- Set programs that you use
 local terminal = "ghostty"
-local fileManager = "dolphin"
+-- local fileManager = "dolphin"
 local browser = "qutebrowser"
 local launcher = "rofi -show drun"
 local runner = "rofi -show run"
