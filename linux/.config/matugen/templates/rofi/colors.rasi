@@ -1,0 +1,14 @@
+* {
+    background:          {{colors.background.dark.hex}}99;
+    background-alt:      {{colors.surface.dark.hex}};
+    foreground:          {{colors.on_background.dark.hex}};
+
+    selected:            {{colors.primary.dark.hex}};
+    selected-foreground: {{colors.on_primary.dark.hex}};
+
+    active:              {{colors.secondary.dark.hex}};
+    active-foreground:   {{colors.on_secondary.dark.hex}};
+
+    urgent:              {{colors.error.dark.hex}};
+    urgent-foreground:   {{colors.on_error.dark.hex}};
+}

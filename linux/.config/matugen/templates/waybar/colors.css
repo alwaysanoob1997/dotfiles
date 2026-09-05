@@ -1,0 +1,15 @@
+@define-color background {{  colors.background.dark.hex}};
+@define-color background-alt {{ colors.surface_container.default.hex }};
+
+@define-color foreground {{  colors.on_background.dark.hex}};
+@define-color foreground-alt {{ colors.on_surface_variant.default.hex }};
+
+@define-color primary {{ colors.primary.dark.hex }};
+@define-color on-primary {{ colors.on_primary.dark.hex }};
+@define-color secondary {{ colors.secondary.dark.hex }};
+@define-color on-secondary {{ colors.on_secondary.dark.hex }};
+@define-color tertiary {{ colors.secondary.dark.hex }};
+@define-color on-tertiary {{ colors.on_secondary.dark.hex }};
+
+@define-color error {{ colors.error.dark.hex }};
+@define-color on-error {{ colors.on_error.dark.hex }};
