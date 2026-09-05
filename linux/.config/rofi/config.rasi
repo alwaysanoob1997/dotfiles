@@ -13,10 +13,10 @@
 configuration {
 	modi:                       "drun,run,window";
     show-icons:                 false;
-    display-drun:               "APPS";
-    display-run:                "RUN";
-    display-filebrowser:        "FILES";
-    display-window:             "WINDOW";
+    display-drun:               "Apps";
+    display-run:                "Run";
+    display-filebrowser:        "Files";
+    display-window:             "Window";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
 }
