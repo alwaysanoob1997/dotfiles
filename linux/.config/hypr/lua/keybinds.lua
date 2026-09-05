@@ -18,6 +18,7 @@ local screenshot = "hyprshot -m region --clipboard-only"
 local mainMod = "CTRL" -- Sets "Windows" key as main modifier
 local altMod = "CTRL + SHIFT" -- Sets "Windows" key as main modifier
 
+-- hl.bind(mainMod .. " + p", hl.dsp.exec_cmd("hyprctl layers > ~/Downloads/layers.txt"))
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" }))

@@ -42,7 +42,7 @@ hl.config({
 		blur = {
 			enabled = true,
 			size = 3,
-			passes = 1,
+			passes = 6,
 			vibrancy = 0.1696,
 		},
 	},
@@ -83,7 +83,7 @@ hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" 
 hl.layer_rule({
 	match = { namespace = "rofi" },
 	blur = true,
-	ignore_alpha = 0.5, -- tune this for stronger/weaker blur under rofi
+	ignore_alpha = 0.10, -- tune this for stronger/weaker blur under rofi
 })
 
 -- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
