@@ -15,6 +15,7 @@ fi
 while true; do
   choice=$(
     rofi -dmenu \
+      -i \
       -p "System Updates" \
       -mesg "$count packages available" <<EOF
 Review
