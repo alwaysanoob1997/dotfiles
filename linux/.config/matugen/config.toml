@@ -15,3 +15,6 @@ output_path = "~/.config/waybar/generated_colors.css"
 input_path = "~/.config/matugen/templates/hyprland/colors.lua"
 output_path = "~/.config/hypr/lua/generated_colors.lua"
 
+[templates.dunst]
+input_path = "~/.config/matugen/templates/dunst/colors"
+output_path = "~/.config/dunst/dunstrc"

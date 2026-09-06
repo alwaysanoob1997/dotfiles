@@ -20,3 +20,5 @@ mkdir -p "$CACHE"
 
 # Continue immediately with Matugen
 matugen image "$WALLPAPER" -m dark --source-color-index 0
+
+dunstctl reload
