@@ -11,12 +11,13 @@
 // @import "~/.config/rofi/generated_colors.rasi"
 
 configuration {
-	modi:                       "drun,run,window";
+	modi:                       "drun,run,power:~/.config/rofi/modes/powermenu.sh";
     show-icons:                 false;
     display-drun:               "Apps";
     display-run:                "Run";
     display-filebrowser:        "Files";
     display-window:             "Window";
+    display-power:             "Power";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
 }
