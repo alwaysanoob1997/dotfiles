@@ -82,7 +82,7 @@ hl.animation({ leaf = "workspacesOut", enabled = true, speed = 1.94, bezier = "a
 hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" })
 
 hl.layer_rule({
-	match = { namespace = "rofi" },
+	match = { namespace = "^(rofi|notifications)$" },
 	blur = true,
 	ignore_alpha = 0.10, -- tune this for stronger/weaker blur under rofi
 })

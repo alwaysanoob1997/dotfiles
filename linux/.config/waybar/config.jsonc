@@ -82,7 +82,7 @@
   },
   "custom/update": {
     "exec": "~/.config/waybar/custom_modules/checkupdates/number-updates.sh",
-    "tooltip-format": "Pacman Updates Avaliable",
+    "tooltip": false,
     "signal": 8,
     "interval": 1800,
     "on-click": "~/.config/waybar/custom_modules/checkupdates/update_available.sh"

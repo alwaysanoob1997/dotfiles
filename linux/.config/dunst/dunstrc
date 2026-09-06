@@ -4,7 +4,7 @@
     origin = top-right
     offset = (20, 20)
 
-    font = JetBrainsMono Nerd Font 10
+    font = JetBrainsMono Nerd Font 12
     corner_radius = 14
 
     frame_width = 1
@@ -37,30 +37,30 @@
     idle_threshold = 120
     transparency = 5
 
-    background = "#191112"
+    background = "#19111288"
     foreground = "#f0dedf"
-    frame_color = "#9f8c8e"
+    frame_color = "#524345"
 
 
 [urgency_low]
     timeout = 4
 
-    background = "#261d1e"
+    background = "#261d1e88"
     foreground = "#d7c2c3"
-    frame_color = "#9f8c8e"
+    frame_color = "#524345"
 
 
 [urgency_normal]
     timeout = 6
 
-    background = "#191112"
+    background = "#19111288"
     foreground = "#f0dedf"
-    frame_color = "#9f8c8e"
+    frame_color = "#524345"
 
 
 [urgency_critical]
     timeout = 0
 
-    background = "#93000a"
+    background = "#93000a88"
     foreground = "#ffdad6"
     frame_color = "#ffb4ab"
