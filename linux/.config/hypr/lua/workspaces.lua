@@ -10,11 +10,11 @@
 local suppressMaximizeRule = hl.window_rule({
 	-- Ignore maximize requests from all apps. You'll probably like this.
 	name = "suppress-maximize-events",
-	match = { class = "org.qutebrowser.qutebrowser" },
+	match = { class = "*" },
 
 	suppress_event = "maximize",
 })
-suppressMaximizeRule:set_enabled(true)
+-- suppressMaximizeRule:set_enabled(true)
 
 hl.window_rule({
 	-- Fix some dragging issues with XWayland

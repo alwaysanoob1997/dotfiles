@@ -81,12 +81,11 @@
     }
   },
   "custom/update": {
-    "format": "",
-    "exec": "omarchy-update-available",
-    "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
-    "tooltip-format": "Omarchy update available",
-    "signal": 7,
-    "interval": 21600
+    "exec": "~/.config/waybar/custom_modules/checkupdates/number-updates.sh",
+    "tooltip-format": "Pacman Updates Avaliable",
+    "signal": 8,
+    "interval": 1800,
+    "on-click": "~/.config/waybar/custom_modules/checkupdates/update_available.sh"
   },
   "group/media": {
     "orientation": "horizontal",
