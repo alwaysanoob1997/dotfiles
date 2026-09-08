@@ -1,15 +1,15 @@
-@define-color background #191112;
-@define-color background-alt #261d1e;
+@define-color background #0e1513;
+@define-color background-alt #1a211f;
 
-@define-color foreground #f0dedf;
-@define-color foreground-alt #d7c2c3;
+@define-color foreground #dde4e1;
+@define-color foreground-alt #bec9c5;
 
-@define-color primary #ffb2bd;
-@define-color on-primary #561d29;
-@define-color secondary #e5bdc1;
-@define-color on-secondary #43292d;
-@define-color tertiary #e5bdc1;
-@define-color on-tertiary #43292d;
+@define-color primary #83d5c6;
+@define-color on-primary #003731;
+@define-color secondary #b1ccc6;
+@define-color on-secondary #1c3530;
+@define-color tertiary #b1ccc6;
+@define-color on-tertiary #1c3530;
 
 @define-color error #ffb4ab;
 @define-color on-error #690005;

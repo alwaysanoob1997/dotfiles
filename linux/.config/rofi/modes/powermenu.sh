@@ -2,10 +2,10 @@
 
 if [ "$ROFI_RETV" -eq 0 ]; then
   printf '%s\n' \
-    "󰌾 Lock" \
-    "󰍃 Logout" \
+    "󰐥 Shutdown" \
     "󰜉 Reboot" \
-    "󰐥 Shutdown"
+    "󰌾 Lock" \
+    "󰍃 Logout"
   exit 0
 fi
 
@@ -15,7 +15,7 @@ case "$1" in
   ;;
 
 "󰍃 Logout")
-  hyprctl dispatch exit >/dev/null 2>&1 &
+  hyprctl dispatch 'hl.dsp.exit()'
   ;;
 
 "󰜉 Reboot")

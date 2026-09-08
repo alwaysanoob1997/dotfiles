@@ -24,7 +24,8 @@
     "orientation": "inherit",
     "drawer": {
       "transition-duration": 300,
-      "children-class": "tray-group-item"
+      "children-class": "tray-group-item",
+      "click-to-reveal": true
     },
     "modules": [
       "custom/expand-icon",

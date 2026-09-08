@@ -37,25 +37,25 @@
     idle_threshold = 120
     transparency = 5
 
-    background = "#19111288"
-    foreground = "#f0dedf"
-    frame_color = "#524345"
+    background = "#0e151388"
+    foreground = "#dde4e1"
+    frame_color = "#3f4946"
 
 
 [urgency_low]
     timeout = 4
 
-    background = "#261d1e88"
-    foreground = "#d7c2c3"
-    frame_color = "#524345"
+    background = "#1a211f88"
+    foreground = "#bec9c5"
+    frame_color = "#3f4946"
 
 
 [urgency_normal]
     timeout = 6
 
-    background = "#19111288"
-    foreground = "#f0dedf"
-    frame_color = "#524345"
+    background = "#0e151388"
+    foreground = "#dde4e1"
+    frame_color = "#3f4946"
 
 
 [urgency_critical]
