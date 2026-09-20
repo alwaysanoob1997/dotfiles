@@ -4,7 +4,7 @@
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
-    output   = "DP-5",
+    output   = "desc:Acer Technologies XV272U V3",
     mode     = "2560x1440@120.00Hz",
     position = "0x0",
     scale    = 1,

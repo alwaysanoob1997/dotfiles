@@ -62,7 +62,7 @@ hl.window_rule({
 	idle_inhibit = "fullscreen",
 })
 
-local acer = "DP-5"
+local acer = "desc:Acer Technologies XV272U V3"
 local virtual = "VIRTUAL-1"
 
 hl.workspace_rule({ workspace = "1", monitor = acer, default = true })
