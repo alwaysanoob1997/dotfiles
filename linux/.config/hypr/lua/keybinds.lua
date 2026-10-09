@@ -33,7 +33,7 @@ hl.bind(altMod .. " + j", hl.dsp.window.move({ direction = "down" }))
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
-hl.bind(mainMod .. " + b", hl.dsp.exec_cmd(browser))
+hl.bind(mainMod .. " + i", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(launcher))
 hl.bind(altMod .. " + SPACE", hl.dsp.exec_cmd(runner))
 -- hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager)) Removing File explorer for now. I don't think it is necessary to keep this.

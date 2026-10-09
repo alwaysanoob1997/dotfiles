@@ -1,12 +1,12 @@
 return {
 
-	background = "rgb(14, 21, 19)",
-	on_background = "rgb(221, 228, 225)",
-	outline = "rgb(137, 147, 144)",
-	outline_variant = "rgb(63, 73, 70)",
-	primary = "rgb(131, 213, 198)",
-	on_primary = "rgb(0, 55, 49)",
-	secondary = "rgb(177, 204, 198)",
-	on_secondary = "rgb(28, 53, 48)",
+	background = "rgb(24, 19, 11)",
+	on_background = "rgb(236, 225, 212)",
+	outline = "rgb(155, 143, 128)",
+	outline_variant = "rgb(79, 69, 57)",
+	primary = "rgb(241, 190, 109)",
+	on_primary = "rgb(67, 44, 0)",
+	secondary = "rgb(220, 195, 161)",
+	on_secondary = "rgb(61, 46, 22)",
 	shadow = "rgb(0, 0, 0)",
 }
